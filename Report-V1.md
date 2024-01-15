@@ -59,7 +59,7 @@ install.packages("tidyverse")
 
     ## 
     ## The downloaded binary packages are in
-    ##  /var/folders/8z/lqbkxs9x4dq62txwlvwt29580000gn/T//Rtmp7yWh1W/downloaded_packages
+    ##  /var/folders/8z/lqbkxs9x4dq62txwlvwt29580000gn/T//RtmpZjMPiE/downloaded_packages
 
 ``` r
 install.packages("zoo")
@@ -67,7 +67,7 @@ install.packages("zoo")
 
     ## 
     ## The downloaded binary packages are in
-    ##  /var/folders/8z/lqbkxs9x4dq62txwlvwt29580000gn/T//Rtmp7yWh1W/downloaded_packages
+    ##  /var/folders/8z/lqbkxs9x4dq62txwlvwt29580000gn/T//RtmpZjMPiE/downloaded_packages
 
 ``` r
 install.packages("ggplot2")
@@ -75,7 +75,7 @@ install.packages("ggplot2")
 
     ## 
     ## The downloaded binary packages are in
-    ##  /var/folders/8z/lqbkxs9x4dq62txwlvwt29580000gn/T//Rtmp7yWh1W/downloaded_packages
+    ##  /var/folders/8z/lqbkxs9x4dq62txwlvwt29580000gn/T//RtmpZjMPiE/downloaded_packages
 
 ``` r
 library(tidyverse)
@@ -112,10 +112,10 @@ tidyverse is used for data cleaning ggplot2 is used for plotting grpahs
 Load data into RStudio
 
 ``` r
-first_time_vehicle = read.csv("First_time_register_vehicle.csv")
-weekly_road_fuel_price = read.csv("weekly_road_fuel_price.csv")
-electric_price = read_xlsx("table_341.xlsx", sheet =3, range = "A7:P80")
-CPI_Data = read.csv("New car CPI index.csv")
+first_time_vehicle = read.csv("Dataset/First_time_register_vehicle.csv")
+weekly_road_fuel_price = read.csv("Dataset/weekly_road_fuel_price.csv")
+electric_price = read_xlsx("Dataset/table_341.xlsx", sheet =3, range = "A7:P80")
+CPI_Data = read.csv("Dataset/New car CPI index.csv")
 ```
 
 ### Data cleaning for first time vehicle
@@ -232,7 +232,7 @@ electric_price = electric_price %>%
 CPI new car
 
 ``` r
-CPI_Data = read.csv("New car CPI index.csv")
+CPI_Data = read.csv("Dataset/New car CPI index.csv")
 CPI_Data = CPI_Data[8:33,]
 CPI_Data_year = CPI_Data %>%
   rename(Year = Title,  CPI_Index = CPI.INDEX.07.1.1A...NEW.CARS.2015.100)
